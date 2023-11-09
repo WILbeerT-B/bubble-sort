@@ -1,16 +1,20 @@
-nums = [5, 1, 4, 2, 8]
-size = nums.length
+num_array = [5, 1, 4, 2, 8]
+size = num_array.length
+j = 1
 
-p nums
-
-for i in 1..size-1
-  if nums[i-1] > nums[i]
-    temp = nums[i-1]
-    nums[i-1] = nums[i]
-    nums[i] = temp
-    puts "swap #{nums[i-1]} & #{nums[i]}"
-  else
-    puts "no swap"
+while j <= size
+  p "array values: #{num_array}"
+  p "PASS #{j}"
+  for i in 1..size-1
+    
+    if num_array[i-1] > num_array[i]
+      temp = num_array[i-1]
+      num_array[i-1] = num_array[i]
+      num_array[i] = temp
+      p "swap #{num_array[i-1]} & #{num_array[i]}"
+    else
+      p "NO SWAP"
+    end
   end
-  p nums
+  j += 1
 end
